@@ -6,7 +6,7 @@ const controles = document.querySelectorAll(".controles i");
 let fimDeJogo = false;
 let foodX, foodY;
 let snakeX = 5, snakeY = 5;
-let velocityX = 0, velocityY = 5;
+let velocityX = 0, velocityY = 0;
 let snakeBody = [];
 let setIntervalId;
 let pontos = 0;
@@ -29,12 +29,13 @@ const mostraFimDeJogo = () => {
 
 //Trocar a velocidade baseada en qual tecla foi pressionada
 const mudarDirecao = e => {
-    if (e.key === "ArrowUP" && velocityY != 1) {
+    if (e.key === "ArrowUp" && velocityY != 1) {
         velocityX = 0;
         velocityY = -1;
+        console.log("aaa")
     } else if (e.key === "ArrowDown" && velocityY != -1) {
         velocityX = 0;
-        velocityY = -1;
+        velocityY = 1;
     } else if (e.key === "ArrowLeft" && velocityX != 1) {
         velocityX = -1;
         velocityY = 0;
