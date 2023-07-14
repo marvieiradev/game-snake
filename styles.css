@@ -15,7 +15,7 @@ body{
 
 .container{
     width: 65vmin;
-    height: 70vmin;
+    height: 85vmin;
     display: flex;
     overflow: hidden;
     flex-direction: column;
@@ -42,6 +42,14 @@ body{
     grid-template: repeat(30, 1fr) / repeat(30, 1fr);
 }
 
+.fim-jogo{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    background: #695820;
+}
+
 .tela-jogo .food{
     background: #FF003D;
 }
@@ -64,6 +72,7 @@ body{
     cursor: pointer;
     border-right: 1px solid #171b26;
 }
+
 
 @media screen and (max-width: 800px){
     .container{

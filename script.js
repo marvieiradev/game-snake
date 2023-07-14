@@ -1,4 +1,6 @@
 const telaJogo = document.querySelector(".tela-jogo");
+const fimJogo = document.querySelector(".fim-jogo");
+const btnFim = document.querySelector(".fim-jogo .reiniciar");
 const pontosElemento = document.querySelector(".pontos");
 const recordeElemento = document.querySelector(".recorde");
 const controles = document.querySelectorAll(".controles i");
@@ -11,6 +13,8 @@ let snakeBody = [];
 let setIntervalId;
 let pontos = 0;
 
+fimJogo.style.display = "none";
+
 //Pegar o recorde do armazenamento local
 let recorde = localStorage.getItem("high-score") || 0;
 recordeElemento.innerText = `Recorde: ${recorde}`;
@@ -21,11 +25,27 @@ const atualizarPosicaoComida = () => {
     foodY = Math.floor(Math.random() * 30) + 1;
 }
 
+
+
 const mostraFimDeJogo = () => {
     clearInterval(setIntervalId);
-    alert("Fim de Jogo! Aperte OK para reiniciar");
-    location.reload();
+    telaJogo.style.display = "none";
+    fimJogo.style.display = "flex";
+    
+    btnFim.addEventListener("click", () => {
+        location.reload();
+    })
+
+
+
+    //telaJogo.style.background = '#005533';
+    //alert("Fim de Jogo! Aperte OK para reiniciar");
+    //location.reload();
 }
+/*
+btnFim.addEventListener("click", () => {
+    location.reload();
+})*/
 
 //Trocar a velocidade baseada en qual tecla foi pressionada
 const mudarDirecao = e => {
