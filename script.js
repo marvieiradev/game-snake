@@ -29,23 +29,15 @@ const atualizarPosicaoComida = () => {
 
 const mostraFimDeJogo = () => {
     clearInterval(setIntervalId);
-    telaJogo.style.display = "none";
-    fimJogo.style.display = "flex";
-    
-    btnFim.addEventListener("click", () => {
-        location.reload();
-    })
+    setTimeout(function () {
+        telaJogo.style.display = "none";
+        fimJogo.style.display = "flex";
 
-
-
-    //telaJogo.style.background = '#005533';
-    //alert("Fim de Jogo! Aperte OK para reiniciar");
-    //location.reload();
+        btnFim.addEventListener("click", () => {
+            location.reload();
+        })
+    }, 500);
 }
-/*
-btnFim.addEventListener("click", () => {
-    location.reload();
-})*/
 
 //Trocar a velocidade baseada en qual tecla foi pressionada
 const mudarDirecao = e => {
