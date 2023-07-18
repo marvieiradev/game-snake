@@ -66,11 +66,11 @@ body {
 
 .fim-jogo button {
     padding: 5px 20px;
-    color: #fff;
+    color: #212B37;
     cursor: pointer;
     margin: 25px;
     font-size: 1.3rem;
-    background: #5425ff;
+    background: #60CBFF;
     border-radius: 5px;
     border: none;
     outline: none;
@@ -92,10 +92,10 @@ body {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 720px) {
     .container {
-        width: 85vmin;
-        height: 105vmin;
+        width: 80vmin;
+        height: 100vmin;
 
     }
 
