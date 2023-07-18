@@ -19,13 +19,12 @@ fimJogo.style.display = "none";
 let recorde = localStorage.getItem("high-score") || 0;
 recordeElemento.innerText = `Recorde: ${recorde}`;
 
-//Criar um food em um aposição aleatoria entre 1 e 30
+//Criar um food em um aposição aleatoria entre 2 e 29
+//impedindo que a comida apareça muito perto da parede
 const atualizarPosicaoComida = () => {
-    foodX = Math.floor(Math.random() * 30) + 1;
-    foodY = Math.floor(Math.random() * 30) + 1;
+    foodX = Math.floor(Math.random() * (29 - 2 + 1) + 2);
+    foodY = Math.floor(Math.random() * (29 - 2 + 1) + 2);
 }
-
-
 
 const mostraFimDeJogo = () => {
     clearInterval(setIntervalId);
