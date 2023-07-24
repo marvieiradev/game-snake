@@ -9,39 +9,42 @@
 
 body {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #E3F2FD;
+    background: #202020;
+    color: #FFFFFF;
 }
 
 .container {
-    width: 65vmin;
-    height: 85vmin;
+    width: 55.5vmin;
+    height: 91.5vmin;
     display: flex;
     overflow: hidden;
     flex-direction: column;
     justify-content: center;
-    background: #293447;
-    border-radius: 5px;
-    box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+    background: #000000;
+    border: solid 0.4em #FFFFFF;
 }
 
 .detalhes-jogo {
     color: #B8C6DC;
     font-weight: 500;
     font-size: 1.5rem;
-    padding: 20px 27px;
-    display: flex;
-    justify-content: space-between;
+    display: flex;  
+}
+
+.detalhes-jogo span{
+    padding: 0.1rem 2rem;
 }
 
 .tela-jogo {
     height: 100%;
     width: 100%;
     display: grid;
-    background: #212B37;
-    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    background: #000000;
+    grid-template: repeat(31, 1fr) / repeat(20, 1fr);
 }
 
 .tela-jogo .food {
@@ -60,13 +63,13 @@ body {
     flex-direction: column;
     justify-content: center;
     font-size: 2.5rem;
-    background: #212B37;
+    background: #000000;
     color: #fff;
 }
 
 .fim-jogo button {
     padding: 5px 20px;
-    color: #212B37;
+    background: #000000;
     cursor: pointer;
     margin: 25px;
     font-size: 1.3rem;
@@ -77,7 +80,7 @@ body {
 }
 
 .controles {
-    display: flex;
+    display: none;
     justify-content: space-between;
 }
 

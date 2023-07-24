@@ -22,8 +22,8 @@ recordeElemento.innerText = `Recorde: ${recorde}`;
 //Criar um food em um aposição aleatoria entre 2 e 29
 //impedindo que a comida apareça muito perto da parede
 const atualizarPosicaoComida = () => {
-    foodX = Math.floor(Math.random() * (29 - 2 + 1) + 2);
-    foodY = Math.floor(Math.random() * (29 - 2 + 1) + 2);
+    foodX = Math.floor(Math.random() * (19 - 2 + 1) + 2);
+    foodY = Math.floor(Math.random() * (30 - 2 + 1) + 2);
 }
 
 const mostraFimDeJogo = () => {
@@ -90,7 +90,7 @@ const initGame = () => {
     snakeBody[0] = [snakeX, snakeY];
 
     //Verifica se o corpo da cobra está fora da tela ou não
-    if (snakeX <= 0 || snakeX > 30 || snakeY <= 0 || snakeY > 30) {
+    if (snakeX <= 0 || snakeX > 20 || snakeY <= 0 || snakeY > 31) {
         return fimDeJogo = true;
     }
 
