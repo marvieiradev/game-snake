@@ -17,7 +17,7 @@ fimJogo.style.display = "none";
 
 //Pegar o recorde do armazenamento local
 let recorde = localStorage.getItem("high-score") || 0;
-recordeElemento.innerText = `Recorde: ${recorde}`;
+recordeElemento.innerText = `Recorde: ${("0000" + recorde).slice(-4)}`;
 
 //Criar um food em um aposição aleatoria entre 2 e 29
 //impedindo que a comida apareça muito perto da parede
@@ -74,8 +74,8 @@ const initGame = () => {
         recorde = pontos >= recorde ? pontos : recorde;
 
         localStorage.setItem("high-score", recorde);
-        pontosElemento.innerText = `Pontos: ${pontos}`;
-        recordeElemento.innerText = `Recorde: ${recorde}`;
+        pontosElemento.innerText = `Pontos: ${("0000" + pontos).slice(-4)}`;
+        recordeElemento.innerText = `Recorde: ${("0000" + recorde).slice(-4)}`;
     }
     //Atualizar a cabeça da cobra
     snakeX += velocityX;
