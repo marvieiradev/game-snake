@@ -9,4 +9,4 @@ O jogador controla uma longa e fina criatura que se arrasta pela tela, coletando
 Utilize as setas de direção para mover a cobrinha.
 
 ## Informações
-Projeto desenvolvido utilizando apenas HTML, CSS e JavaScript
+Projeto desenvolvido utilizando apenas HTML, CSS e JavaScript.
