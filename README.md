@@ -10,3 +10,5 @@
 
 <h3>Informações:</h3>
 <p>Pojeto desenvolvido utilizando apenas HTML, CSS e JavaScript</p>
+
+<img src="screenshot.png"/>
